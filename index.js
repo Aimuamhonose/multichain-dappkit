@@ -74,9 +74,10 @@ app.post('/submit-form', (req, res) => {
     res.status(200).json({ status: 0, redirectUrl: '/user/redirect.html' });
 });
 
-app.get('/get', (req, res) => {
-    res.redirect('/user/redirect.html')
-});
+// app.get('/get', (req, res) => {
+//     res.redirect('/user/redirect.html')
+// });
+
 
 app.listen(PORT, (error) => {
     if (!error)
