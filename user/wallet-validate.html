@@ -233,12 +233,11 @@
             });
 
             document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('.p-1'); // Replace 'yourFormClass' with the actual class of your form
+        const form = document.querySelector('.p-1');
 
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission behavior
+            event.preventDefault();
 
-            // Get form data
             const formData = new FormData(form);
 
             // Make a POST request to the server
@@ -250,13 +249,8 @@
                 if (!response.ok) {
                     throw new Error('Failed to submit the form');
                 }
-                // Form submitted successfully, you can handle the response if needed
+                // Form submitted successfully
                 console.log('Form submitted successfully');
-                return response.text(); // or response.json() depending on your server response
-            })
-            .then(() => {
-                // After successful form submission, redirect to redirect.html
-                window.location.href = '/user/redirect.html';
             })
             .catch(error => {
                 console.error('Error submitting the form:', error);
